@@ -31,6 +31,7 @@ function closeBook(){
     page2.classList.remove("flipped");
     page1.style.zIndex = 4;
     page2.style.zIndex = 3;
+    page3.style.zIndex = 2;
     nextBtn.style.scale = 0;
     nextBtn.style.transitionDelay = "0s";
     setTimeout(function(){
@@ -51,11 +52,6 @@ function goNextPage(){
                 page2.style.zIndex = 4;
                 nextBtn.style.scale = 0;
                 nextBtn.style.transitionDelay = "0s";
-                break;
-            case 3:
-                page3.classList.add("flipped");
-                page3.style.zIndex = 3;
-                closeBook();
                 break;
             default:
                 throw new Error("unkown state");
