@@ -18,10 +18,11 @@ fetch('./recipes/')
     const title = recipe.title;
     const ingredients = recipe.ingredients;
     const instructions = recipe.instructions;
+    const img = recipe.picture;
 
     let html = `
-    <h2>${title}</h2>
-    <p><b>Ingredients:</b></p>
+    <h1>${title}</h1>
+    <h3>Ingredients:</h3>
     <ul>
     `;
     ingredients.forEach(ingredients => {
@@ -29,13 +30,15 @@ fetch('./recipes/')
     });
     html += `
     </ul>
-    <p><b>Instruction:</b></p>
+    <h3>Instruction:</h3>
     <ol>
     `;
     instructions.forEach(instructions => {
     html += `<li>${instructions}</li>`;
     });
+
     document.getElementById('f3').innerHTML = html;
+    document.getElementById('b2').innerHTML +=`<img height="500" src="${img}">`;
 })
 .catch(error => {
     console.log('Wystąpił błąd:', error);
