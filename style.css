@@ -76,6 +76,7 @@ body{
     transform: translateX(220px) translateY(200px);
     transition-delay: 0.45s;
     color: #fff;
+    font-size: 20px;
 
     background-color: #e53235;
     border: 2px solid #912123;
@@ -84,7 +85,7 @@ body{
     border-radius: 50%;
     cursor: pointer;
 
-    animation: btn-animation 1s linear infinite;
+    animation: btn-animation 5s linear infinite;
 }
 #p1{
     z-index: 3;
@@ -115,6 +116,9 @@ body{
     background: rgb(255,255,255);
     background: linear-gradient(90deg,rgb(60, 60, 60) 0%, rgba(245,245,245,1) 1%, rgba(255,255,255,1) 20%);
 }
+#f2 li{
+    padding: 5px 0;
+}
 #b1{
     color: transparent;
     background: rgb(235,130,132);
@@ -127,6 +131,10 @@ background: linear-gradient(90deg, rgba(235,130,132,1) 90%, rgba(210,114,117,1) 
 #b2 img{
     position: absolute;
     box-shadow: 0 0 10px gray;
+}
+.instruction-title{
+    font-weight: 800;
+    font-size: 40px;
 }
 #f3{
     background: rgb(255,255,255);
