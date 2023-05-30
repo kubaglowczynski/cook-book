@@ -122,7 +122,7 @@ body{
 #b1{
     color: transparent;
     background: rgb(235,130,132);
-background: linear-gradient(90deg, rgba(235,130,132,1) 90%, rgba(210,114,117,1) 100%);
+    background: linear-gradient(90deg, rgba(235,130,132,1) 90%, rgba(210,114,117,1) 100%);
 }
 #b2{
     background: rgb(255,255,255);
