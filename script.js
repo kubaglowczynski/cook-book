@@ -67,7 +67,7 @@ function goNextPage(){
 fetch('./recipes/')
 .then(response => {
     if (!response.ok) {
-    throw new Error('Wystąpił błąd podczas pobierania listy plików.');
+    throw new Error('Error.');
 }
     return response.text();
 })
