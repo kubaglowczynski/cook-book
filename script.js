@@ -107,5 +107,5 @@ fetch('./recipes/')
     document.getElementById('b2').innerHTML +=`<img height="500" src="${img}">`;
 })
 .catch(error => {
-    console.log('Wystąpił błąd:', error);
+    console.log('Error:', error);
 });
