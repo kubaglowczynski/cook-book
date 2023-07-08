@@ -64,7 +64,7 @@ function goNextPage(){
 
 // recipes script
 
-fetch('./recipes/')
+fetch('/recipes/')
 .then(response => {
     if (!response.ok) {
     throw new Error('Error.');
@@ -77,7 +77,7 @@ fetch('./recipes/')
     const links = htmlDoc.querySelectorAll('a[href$=".json"]');
     const filenames = Array.from(links).map(link => link.href.split('/').pop());
     const randomFilename = filenames[Math.floor(Math.random() * filenames.length)];
-    return fetch(`./recipes/${randomFilename}`);
+    return fetch(`/recipes/${randomFilename}`);
 })
 .then(response => response.json())
 .then(recipe => {
