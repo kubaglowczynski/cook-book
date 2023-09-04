@@ -1,162 +1,173 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    font-family: sans-serif;
-    background-color: bisque;
+  font-family: sans-serif;
+  background-color: bisque;
 }
-.book{
-    position: relative;
-    width: 450px;
-    height: 650px;
-    transition: transform 0.5s;
+.book {
+  position: relative;
+  width: 450px;
+  height: 650px;
+  transition: transform 0.5s;
 }
-.page{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    perspective: 1500px;
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  perspective: 1500px;
 }
-.front, .back{
-    background-color: #fff;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform-origin: left;
-    transition: transform 0.5s;
+.front,
+.back {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: left;
+  transition: transform 0.5s;
 }
-.front{
-    z-index: 1;
-    backface-visibility: hidden;
+.front {
+  z-index: 1;
+  backface-visibility: hidden;
 }
-.back{
-    z-index: 0;
+.back {
+  z-index: 0;
 }
-.back-content{
-    transform: rotateY(180deg);
+.back-content {
+  transform: rotateY(180deg);
 }
 .front-content,
-.back-content{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.back-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .flipped .front,
-.flipped .back{
-    transform: rotateY(-180deg);
-    transition: 0.5s;
+.flipped .back {
+  transform: rotateY(-180deg);
+  transition: 0.5s;
 }
 #open-btn,
 #close-btn,
-#close-btn-second{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    cursor: pointer;
+#close-btn-second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  cursor: pointer;
 }
-#next-btn{
-    scale: 0;
-    position: absolute;
-    transform: translateX(220px) translateY(200px);
-    transition-delay: 0.45s;
-    color: #fff;
-    font-size: 20px;
+#next-btn {
+  scale: 0;
+  position: absolute;
+  transform: translateX(220px) translateY(200px);
+  transition-delay: 0.45s;
+  color: #fff;
+  font-size: 20px;
 
-    background-color: #e53235;
-    border: 2px solid #912123;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    cursor: pointer;
+  background-color: #e53235;
+  border: 2px solid #912123;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  cursor: pointer;
 
-    animation: btn-animation 5s linear infinite;
+  animation: btn-animation 5s linear infinite;
 }
-#p1{
-    z-index: 3;
+#p1 {
+  z-index: 3;
 }
-#p2{
-    z-index: 2;
+#p2 {
+  z-index: 2;
 }
-#p3{
-    z-index: 1;
+#p3 {
+  z-index: 1;
 }
-#f1{
-    background: url("./cover.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: inherit;
+#f1 {
+  background: url("./cover.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: inherit;
 }
-#f1 a{
-    position: absolute;
-    bottom: 40px;
-    left: 30px;
-    text-decoration: none;
-    color: #fff;
+#f1 a {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  text-decoration: none;
+  color: #fff;
 }
-#f2{
-    display: flex;
-    flex-direction: column;
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg,rgb(60, 60, 60) 0%, rgba(245,245,245,1) 1%, rgba(255,255,255,1) 20%);
+#f2 {
+  display: flex;
+  flex-direction: column;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgb(60, 60, 60) 0%,
+    rgba(245, 245, 245, 1) 1%,
+    rgba(255, 255, 255, 1) 20%
+  );
 }
-#f2 li{
-    padding: 5px 0;
+#f2 li {
+  padding: 5px 0;
 }
-#b1{
-    color: transparent;
-    background: rgb(235,130,132);
-    background: linear-gradient(90deg, rgba(235,130,132,1) 90%, rgba(210,114,117,1) 100%);
+#b1 {
+  color: transparent;
+  background: rgb(235, 130, 132);
+  background: linear-gradient(90deg, rgba(235, 130, 132, 1) 90%, rgba(210, 114, 117, 1) 100%);
 }
-#b2{
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 90%, rgba(245,245,245,1) 100%);
+#b2 {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 1) 90%, rgba(245, 245, 245, 1) 100%);
 }
-#b2 img{
-    position: absolute;
-    box-shadow: 0 0 10px gray;
+#b2 img {
+  position: absolute;
+  box-shadow: 0 0 10px gray;
 }
-.instruction-title{
-    font-weight: 800;
-    font-size: 40px;
+.instruction-title {
+  font-weight: 800;
+  font-size: 40px;
 }
-#f3{
-    background: rgb(255,255,255);
-    background: linear-gradient(90deg,rgb(60, 60, 60) 0%, rgba(245,245,245,1) 1%, rgba(255,255,255,1) 20%);
+#f3 {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgb(60, 60, 60) 0%,
+    rgba(245, 245, 245, 1) 1%,
+    rgba(255, 255, 255, 1) 20%
+  );
 
-    display: block;
-    padding: 20px 40px;
+  display: block;
+  padding: 20px 40px;
 }
-#f3 h3{
-    color: #e53235;
+#f3 h3 {
+  color: #e53235;
 }
 @keyframes btn-animation {
-    0%{
-        background-color: #e53235;
-        border: 2px solid #912123;
-    }
-    50%{
-        background-color: #6e1719;
-        color: rgb(220,220,220);
-    }
-    100%{
-        background-color: #e53235;
-        border: 2px solid #912123;
-    }
+  0% {
+    background-color: #e53235;
+    border: 2px solid #912123;
+  }
+  50% {
+    background-color: #6e1719;
+    color: rgb(220, 220, 220);
+  }
+  100% {
+    background-color: #e53235;
+    border: 2px solid #912123;
+  }
 }
